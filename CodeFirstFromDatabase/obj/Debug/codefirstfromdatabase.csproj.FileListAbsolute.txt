@@ -1,0 +1,14 @@
+F:\localdb\codefirstfromdatabase\bin\Debug\codefirstfromdatabase.exe.config
+F:\localdb\codefirstfromdatabase\bin\Debug\codefirstfromdatabase.exe
+F:\localdb\codefirstfromdatabase\bin\Debug\codefirstfromdatabase.pdb
+F:\localdb\codefirstfromdatabase\bin\Debug\EntityFramework.dll
+F:\localdb\codefirstfromdatabase\bin\Debug\EntityFramework.SqlServer.dll
+F:\localdb\codefirstfromdatabase\bin\Debug\EntityFramework.xml
+F:\localdb\codefirstfromdatabase\bin\Debug\EntityFramework.SqlServer.xml
+F:\localdb\codefirstfromdatabase\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.exe
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.pdb
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.csprojResolveAssemblyReference.cache
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.Migrations.addtest01.resources
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.csproj.GenerateResource.Cache
+F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.Migrations.addtest02.resources
