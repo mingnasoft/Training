@@ -1,0 +1,82 @@
+﻿*{padding:0; margin:0;}
+html, body{ height:100%;}
+body{ margin:0; font-family:Microsoft YaHei,宋体; font-size:12px; color:#555; line-height:24px;}
+ul,li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+p{ padding:0; margin:0;}
+a{color:inherit; text-decoration:none;}
+a:link{ text-decoration:none;}
+a:visited{ color:inherit; text-decoration:none;}
+.clearboth{ clear:both;}
+/*login*/
+.login{ width:100%;}
+.login_main{ width:936px; margin:0 auto; padding-top:150px; text-align:left; background:url(../images/login_bg2.png) no-repeat left 210px; min-height:430px; _height:430px; position:relative;}
+.login_main .name{ border-bottom:solid 2px #f08401; color:#fff; font-size:35px; line-height:60px; text-shadow:1px 2px 0 #333;}
+.denglu{ background:url(../images/l_bg.png) no-repeat; width:319px; height:435px; position:absolute; right:20px; top:140px;}
+.denglu ul{ padding-top:100px; width:230px; margin:0 auto; text-align:left; font-size:14px;}
+.denglu ul li{ margin-bottom:10px;list-style: none outside none;}
+.denglu ul li .font1{ color:#94701e; font-size:18px;}
+.denglu ul li .font2{ color:#a7a7a7; padding-left:10px;}
+.denglu ul li input{ border:solid 1px #dadada; padding-left:50px; height:35px; line-height:35px; color:#333; width:180px; font-family: Arial, "微软雅黑";}
+.denglu ul li input.nm{ background:#fff url(../images/iocn01.jpg) no-repeat left;}
+.denglu ul li input.key{ background:#fff url(../images/iocn02.jpg) no-repeat left;}
+.denglu ul li input.yzm{ padding-left:10px; width:90px;}
+.denglu ul li input.button{ background:url(../images/button_login.png) no-repeat; width:124px; height:39px; padding:0; border:none; cursor:pointer; float:right;}
+.copy{ position:absolute; bottom:35px; color:#f6f6f6; right:40px; font-size:11px;}
+
+.index_bg{}
+.main{ width:1000px; margin:0 auto;}
+.xzlogo{ width:100%; text-align:center; float:left; margin-top:40px; padding:5px 0; border-bottom:solid 1px #133c65; box-shadow:0 1px 0 #4277ac;}
+.mingzi{ width:400px; margin:0 auto;}
+.cont{ width:600px; margin:0 auto;}
+.box{ width:260px; background:#336b9e; float:left; color:#fff; text-align:center; padding:30px 0; margin:40px 20px; border-radius:5px;}
+.box .font1{ font-size:20px; color:#fff; margin-bottom:20px;}
+.box1{ background:#0073dc;}
+.box a{ background:#f0b500; color:#fff; padding:4px 10px; border-radius:3px; font-size:16px;}
+.box a:hover{ background:#ff0000;}
+.box .iocn{ background:#f0b500; border-radius:50%; width:80px; height:80px; font-size:50px; margin:0 auto 15px;}
+.box .iocn i{ margin:15px;}
+
+.index_nr{ width:728px; margin:0 auto; padding-top:143px; position:relative; height:300px;}
+.zzlogo{ position:absolute; left:50%; margin-left:-60px; width:120px; top:60px;}
+.zzlogo img{ max-width:100%;}
+.index_left{ background:url(../images/b_bg.png) no-repeat; width:341px; height:187px; padding:85px 0 0 20px; line-height:30px; float:left; margin:0 1px; text-align:center; position:absolute; left:0; z-index:10;}
+.index_left .font1{ font-size:24px; color:#fff; margin-bottom:20px; text-shadow:0 1px 0 #333;}
+.index_left .font2{ font-size:18px; color:#e5b701; float:left;}
+.index_left a{ background:#f0b500; color:#fff; padding:4px 10px; border-radius:3px; font-size:16px;}
+.index_left a:hover{ background:#ff0000;}
+.index_right{ background:url(../images/b2_bg.png) no-repeat; left:364px; z-index:10;}
+
+.zhgl{ position:absolute; top:132px; right:20px; }
+.zhgl a{ font-size:14px; color:#f0b500;}
+.zhgl a:hover{ color:#fff;}
+
+#loading {
+	position:fixed;
+	z-index:20;
+	top:1em;
+	width:100%;
+	color:#FFF;
+	text-align:center
+}
+#loading p {
+	display:inline-block;
+	vertical-align:middle;
+	*vertical-align:auto;
+	*zoom:1;
+	*display:inline;
+	font-size:16px;
+	padding:.33333em .66667em;
+	background:rgba(0,0,0,.8);
+	filter:alpha(Opacity=90);
+	opacity:.9;
+	-moz-border-radius:.16667em;
+	-webkit-border-radius:.16667em;
+	border-radius:.16667em;
+	-moz-box-shadow:#333 0 0 .16667em;
+	-webkit-box-shadow:#333 0 0 .16667em;
+	box-shadow:#333 0 0 .16667em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box
+}

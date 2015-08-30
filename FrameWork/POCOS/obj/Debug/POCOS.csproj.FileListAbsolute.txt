@@ -1,0 +1,11 @@
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\POCOS.dll.config
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\POCOS.dll
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\POCOS.pdb
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\EntityFramework.dll
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\EntityFramework.xml
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\Training\FrameWork\POCOS\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\GitHub\Training\FrameWork\POCOS\obj\Debug\POCOS.csprojResolveAssemblyReference.cache
+E:\GitHub\Training\FrameWork\POCOS\obj\Debug\POCOS.dll
+E:\GitHub\Training\FrameWork\POCOS\obj\Debug\POCOS.pdb

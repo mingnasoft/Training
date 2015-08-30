@@ -1,0 +1,59 @@
+﻿@model POCOS.Models.Category
+@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/ajaxform.cshtml";
+}
+@using (Ajax.BeginForm("save", "category", new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "reloadDG",
+        LoadingElementId = "loading",
+    }, 
+    new { @class = "basic-grey" }
+    )
+ )
+{
+  
+      
+    @Html.HiddenFor(p => p.RowID)
+    @Html.HiddenFor(p => p.IsEnable)
+    @Html.HiddenFor(p => p.ctime)
+    <table>
+        <tr>
+            <td colspan="2" class="txtc" style="width: 15%;">
+
+                <div>@Html.ValidationMessageFor(model => model.title)</div>
+                <div>@Html.ValidationMessageFor(model => model.SeqNo) </div>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">父节点:</td>
+            <td>
+
+                @Html.DropDownListFor(p => p.ParentRowID, ViewBag.roles as IEnumerable<SelectListItem>, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">名称:</td>
+            <td>
+                @Html.EditorFor(model => model.title)
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">排序号 :</td>
+            <td>
+                @Html.EditorFor(mode => mode.SeqNo)
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="txtc">
+                <input type="submit" class="button" value="提交" /></td>
+        </tr>
+    </table>
+  
+
+}

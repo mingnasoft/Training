@@ -12,3 +12,6 @@ F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.csprojResolveAs
 F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.Migrations.addtest01.resources
 F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.csproj.GenerateResource.Cache
 F:\localdb\codefirstfromdatabase\obj\Debug\codefirstfromdatabase.Migrations.addtest02.resources
+E:\GitHub\Training\CodeFirstFromDatabase\bin\Debug\codefirstfromdatabase.exe.config
+E:\GitHub\Training\CodeFirstFromDatabase\obj\Debug\codefirstfromdatabase.exe
+E:\GitHub\Training\CodeFirstFromDatabase\obj\Debug\codefirstfromdatabase.pdb

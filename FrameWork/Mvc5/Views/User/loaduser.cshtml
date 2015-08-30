@@ -1,0 +1,40 @@
+﻿ @model POCOS.Models.Users    
+
+  <form  class="basic-grey" action="/user/add" method="post" data-ajax="true"  data-ajax-success="reloadDG"  data-ajax-loading="#loading" >
+        <h1>用户管理</h1>
+       @Html.HiddenFor(p => p.ID)
+         @Html.HiddenFor(p => p.Ctime)
+       @Html.HiddenFor(p => p.IsEnable)
+             <table>
+                 <tr>
+                     <td class="td1">账号 :</td>
+                     <td>
+                         <input name="Name" type="text"  value="@Model.Name"/>
+                     </td>
+                 </tr>
+                  <tr>
+                     <td class="td1">姓名 :</td>
+                     <td>
+                         <input name="DisplayName" type="text" value="@Model.DisplayName" />
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="td1">角色 :</td>
+                     <td>
+                       @Html.DropDownListFor(p => p.RoleID, ViewBag.roles as IEnumerable<SelectListItem>, new { @class = "form-control" })
+                        </td>
+                 </tr>
+
+                 <tr>
+                     <td class="td1">备注 :</td>
+                     <td>
+                         <textarea id="Textarea1" name="Brief" placeholder="备注">@Model.Brief</textarea></td>
+                 </tr>
+                 <tr>
+                     <td></td>
+                     <td>
+                         <input type="submit" class="button" value="提交" /></td>
+                 </tr>
+             </table>
+
+         </form>

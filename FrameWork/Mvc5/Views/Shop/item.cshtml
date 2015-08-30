@@ -1,0 +1,60 @@
+﻿ @model POCOS.Models.Shop 
+
+@using (Ajax.BeginForm("save", "shop", new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "reloadDG",
+        LoadingElementId = "loading",
+    }, 
+    new { @class = "basic-grey" }
+    )
+ )
+{
+    <h1>客户管理 <span></span></h1>
+      
+    @Html.HiddenFor(p => p.ID)
+
+    <table>
+        <tr>
+            <td colspan="4" class="txtc" style="width: 15%;">
+       
+              <div> @Html.ValidationMessageFor(model => model.Name)</div>
+              <div>   @Html.ValidationMessageFor(model => model.Tel) </div>
+       
+           
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">客户编号:</td>
+            <td>
+                @Html.EditorFor(model => model.Name)   
+
+            </td>
+            <td class="td1">名称 :</td>
+            <td>
+                @Html.EditorFor(mode => mode.Tel)
+            </td>
+        </tr>
+       
+        <tr>
+            <td colspan="4" class="txtc">
+                <input type="submit" class="button" value="提交" />
+
+                <input id="Button1" type="button" value="button" onclick="getinfo()" />
+
+            </td>
+        </tr>
+    </table>
+    <script>
+        function getinfo()
+        {
+
+            $.getJSON("/shop/a", { name: "John", time: "2pm" }, function (json) {
+                alert("JSON Data: " + json.users[3].name);
+                $("#id").val(json.users[3].name);
+            });
+        }
+
+    </script>
+
+}

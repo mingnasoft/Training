@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Mvc5.WebForms.admin.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title><link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="/Scripts/jquery.v1.11.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+     <script src="/easyUI/jquery.easyui.min.js"></script>
+    <link href="/easyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="/easyUI/themes/icon.css" rel="stylesheet" />
+    <script src="/easyUI/locale/easyui-lang-zh_CN.js"></script>
+    <script src="/layer1.9.0/layer.js"></script>
+    <link href="/css/css.css" rel="stylesheet" />
+    <script src="/Scripts/Common.js"></script>
+    
+    <style>
+        .panel-body {
+     padding: 0px; 
+}
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="container-fluid" >
+ 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+ <div id="loading" style="display:none;"><p>
+            加载中....
+        </p> </div>
+
+ <div id="layerContainer" >
+ </div>
+ <div id="layerHide" style="display:none;" >
+ </div>
+</body>
+</html>

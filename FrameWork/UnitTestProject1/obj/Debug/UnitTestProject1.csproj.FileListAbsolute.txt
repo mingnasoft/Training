@@ -1,0 +1,11 @@
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+E:\GitHub\Training\FrameWork\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+E:\GitHub\Training\FrameWork\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+E:\GitHub\Training\FrameWork\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\EntityFramework.dll
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\EntityFramework.xml
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\Training\FrameWork\UnitTestProject1\bin\Debug\zh-Hans\EntityFramework.resources.dll

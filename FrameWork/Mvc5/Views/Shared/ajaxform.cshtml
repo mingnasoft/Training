@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ajax</title>
+</head>
+<body>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <link href="/css/css.css" rel="stylesheet" />
+
+    <script src="~/layer1.9.0/layer.js"></script>
+    <script>
+        function msgV2(msg, miao, tubiao, url) {
+            layer.closeAll();
+
+            layer.msg(msg, { icon: tubiao });
+            bind1();
+            if (url != "") jump(0, url)
+
+
+        }
+
+        function ajaxbegin(id) {
+
+            layer.load();
+         
+            return false;//没作用，只有放在按钮的click事件上做验证吧
+        }
+        function ajaxcomplete(data) {
+
+
+          
+        }
+        function ajaxsuccess() {
+            
+        }
+    </script>
+
+    @RenderBody()
+</body>
+</html>

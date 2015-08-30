@@ -1,0 +1,28 @@
+﻿ @model POCOS.Models.Roles    
+
+  <form  class="basic-grey" action="/role/add" method="post" data-ajax="true"  data-ajax-success="reloadDG"  data-ajax-loading="#loading" >
+        <h1>角色管理</h1>
+       @Html.HiddenFor(p => p.ID)
+       @Html.HiddenFor(p => p.IsEnable)
+             <table>
+                 <tr>
+                     <td class="td1"  style="width:25%;">角色名 :</td>
+                     <td>
+                         <input name="RoleName" type="text"  value="@Model.RoleName"/>
+                     </td>
+                 </tr>
+                
+
+                 <tr>
+                     <td class="td1">备注 :</td>
+                     <td>
+                         <textarea id="Textarea1" name="Brief" placeholder="备注">@Model.Brief</textarea></td>
+                 </tr>
+                 <tr>
+                     <td></td>
+                     <td>
+                         <input type="submit" class="button" value="提交" /></td>
+                 </tr>
+             </table>
+
+         </form>

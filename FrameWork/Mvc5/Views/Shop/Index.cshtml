@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+ <div id="cc" class="easyui-layout" style="width:100%; min-height:500px;">   
+     
+    <div data-options="region:'east',title:'说明',split:true," style="width:100px; padding:5px;">
+
+      这里放使用书名书
+
+    </div>   
+  
+    <div data-options="region:'center',title:'账号列表',noheader:true,border:false" style="padding:0px;background:#fff;">
+               <div> <input id="name" type="text" value="" />
+                   <input id="Button1" type="button" value="button" onclick="return Bind();" />
+
+
+               </div>
+          <table id="dg"></table>
+             <script>
+
+                 $(function()
+                 {
+                     Bind();
+                 })
+
+
+                 function Bind()
+                 {
+                     var val = $("#name").val();
+
+                     $('#dg').datagrid({
+                         pagination: true, showFooter: true, width: '100%', checkbox: true,
+                         singleSelect: true,
+
+                         selectOnCheck: true,
+
+                         checkOnSelect: true,
+                         url: '/shop/getlist?name=' + val,
+                         columns: [[
+                             { field: 'ck', checkbox: true },
+                             { field: 'Name', title: '名称', width: 100 },
+                             { field: 'Tel', title: '简称', width: 100, align: 'right' }
+
+                         ]],
+                         toolbar: [{
+                             iconCls: 'icon-add',
+                             handler: function () {
+                                 //////
+
+                                 showuser(0);
+                                 ///////////////////
+                             }
+                         }, '-', {
+                             iconCls: 'icon-edit',
+                             handler: function () {
+                                 var checkedItems = $('#dg').datagrid('getChecked');
+                                 showuser(checkedItems[0].ID);
+                             }
+                         }, '-', {
+                             iconCls: 'icon-remove',
+                             handler: function () {
+                                 var checkedItems = $('#dg').datagrid('getChecked');
+                                 del(checkedItems[0].ID);
+                             }
+                         }],
+                         onDblClickRow: function (rowIndex, rowData) {
+
+                             showuser(rowData.ID);
+                         }
+
+                     });
+                 }
+
+            
+    </script>
+
+    </div>   
+</div>  
+<%-- 添加开始--%>
+      <script>
+          function showuser(ID) {
+             layer.load(0, { time: 2 * 1000 });
+            //  parent.layer.msg('Hi, man', { shade: 0.3 })
+              $("#layerContainer").load("/shop/loadItem", { ID: ID }, function () {
+                  $("form").removeData("validator").removeData("unobtrusiveValidation");
+                    $.validator.unobtrusive.parse($("form"));
+                    layer.open({
+                      type: 1,
+                      area: '800px',
+                      shade: false,
+                      closeBtn:1,
+                      title: false, //不显示标题
+                      content: $('#layerContainer'), //捕获的元素
+                      cancel: function (index) {
+                          layer.close(index);
+                          //  this.content.show();
+                          //   layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', { time: 5000 });
+
+                          // reloadDG();
+
+                      }
+                   });
+                 
+              });
+          }
+
+          function del(ID) {
+
+              $('#dg').datagrid('insertRow', {
+                  index: 1,	// 索引从0开始
+                  row: {
+                       ID:45,
+                      Name: '新名称',
+                      Tel: "132988574"
+                  }
+              });
+
+              //$.messager.confirm('确认', '您确认想要删除记录吗？', function (r) {
+              //    if (r) {
+              //        $("#layerContainer").load("/shop/del", { ID: ID }, function (data) {
+              //            $("#layerContainer").html("");
+              //            var obj = jQuery.parseJSON(data);
+              //            layer.msg(obj.msg, { icon: 1 });
+              //            if (obj.type == 1)
+              //            { reloadDG(); }
+
+              //        });
+              //    }
+              //});
+
+   
+
+
+
+
+           
+          }
+          function reloadDG() {
+              $('#dg').datagrid('reload');
+              $("#Name").val("");
+              $("#Tel").val(" ");
+          }
+
+      </script>
+
+
+
+
+
