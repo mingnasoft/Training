@@ -54,6 +54,7 @@
     <Compile Include="Models\LoadingChange_Detail.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\T_Ord_OrderChange_Detail.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

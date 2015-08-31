@@ -55,6 +55,7 @@ namespace Mvc5.Controllers
         public ActionResult combotree(string parentRowID)
         {
             IsoDateTimeConverter timeFormat = new IsoDateTimeConverter();
+           
             timeFormat.DateTimeFormat = "yyyy-MM-dd";
             var mm = getdt(parentRowID);
             return Content(JsonConvert.SerializeObject(mm, Newtonsoft.Json.Formatting.Indented, timeFormat), "text/plain");
@@ -62,10 +63,10 @@ namespace Mvc5.Controllers
         private object getdt(string parentRowid)
         {
 
-            var   list =   (from u in db.Category.ToList()
-                        where u.ParentRowID ==  parentRowid 
-                            where (u.IsEnable == true)
-                         orderby u.SeqNo 
+            var list = (from u in db.Category.ToList()
+                        where u.ParentRowID == parentRowid
+                        where (u.IsEnable == true)
+                        orderby u.SeqNo
                         select new combotreeData
                             {
                                 id = u.RowID.ToString(),

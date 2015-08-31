@@ -3,21 +3,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="form-inline" style="padding-top:10px; padding-bottom:10px;">
-  <div class="form-group">
-    <label for="exampleInputName2">客户名</label>
-    <input type="text" class="form-control" id="name" placeholder="请输入关键字"/>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail2">联系人</label>
-    <input type="email" class="form-control" id="contact" placeholder="请输入联系人"/>
-  </div>
-  <button type="button" onclick="Bind();" class="btn btn-primary">查询</button>
-</div>
+    <div class="form-inline" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="form-group">
+          
+            <input type="text" class="form-control" id="name" placeholder="请输入客户名" />
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" id="contact" placeholder="请输入联系人" />
+        </div>
+        <button type="button" onclick="Bind();" class="btn btn-primary">查询</button>
+    </div>
 
     <div id="cc" class="easyui-layout" style="width: 100%; min-height: 500px;">
 
-  <button type="submit" class="btn btn-default">Send invitation</button>
+      
         <div data-options="region:'center',title:'账号列表',noheader:true,border:false" style="padding: 0px; background: #fff;">
 
             <table id="dg"></table>
@@ -31,7 +30,7 @@
                 function Bind() {
 
                     $('#dg').datagrid({
-                        pagination: true, showFooter: true, width: '100%', checkbox: true,
+                        pagination: true, showFooter: false, width: '100%', checkbox: true,
                         singleSelect: true, selectOnCheck: true, checkOnSelect: true,
                         queryParams: {
                             name: $("#name").val(),
@@ -53,10 +52,7 @@
                         toolbar: [{
                             iconCls: 'icon-add',
                             handler: function () {
-
-
                                 showuser(0);
-
                             }
                         }, '-', {
                             iconCls: 'icon-edit',
@@ -87,7 +83,6 @@
 
         function showuser(ID) {
 
-
             //$("form").removeData("validator").removeData("unobtrusiveValidation");
             //$.validator.unobtrusive.parse($("form"));
 
@@ -100,7 +95,7 @@
                 content: '/customer/loadItem?id=' + ID,
                 cancel: function (index) {
                     layer.close(index);
-                    reloadDG();
+                   // reloadDG();
                 }
             });
 
@@ -108,17 +103,20 @@
 
         function del(ID) {
             layer.confirm('您确定要删除？', {
-                btn: ['Yes', 'NO'], 
+                btn: ['Yes', 'NO'],
                 shade: false //不显示遮罩
-            }, function () {
-
+            },
+            function () {
                 $.post('/customer/del', { ID: ID }, function (data) {
 
                     layer.msg(data.msg, { icon: 1 });
                     if (data.type == 1)
-                    { reloadDG(); }
+                    {
+                        reloadDG();
+                    }
                 });
-            }, function () {
+            },
+            function () {
 
             });
 

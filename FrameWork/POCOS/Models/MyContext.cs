@@ -18,6 +18,7 @@ namespace POCOS.Models
         public virtual DbSet<LoadingChange_Detail> LoadingChange_Detail { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<T_Ord_OrderChange_Detail> T_Ord_OrderChange_Detail { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

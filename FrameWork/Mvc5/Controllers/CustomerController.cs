@@ -19,33 +19,33 @@ namespace Mvc5.Controllers
         public ActionResult Index(string name, string contact)
         {
 
-            var list = from u in db.Customer
-                           where u.IsEnable == 1
-                           && u.CustomreName.Contains(name)
-                           && u.Contact1.Contains(contact)
-                           orderby u.ID
-                           select new
-                           {
-                               u.ID,
-                               u.CustomreName,
-                               u.ShortName,
-                               u.CustomreNo,
-                               u.Address,
-                               u.Contact1,
-                               u.Contact2,
-                               u.Tel1,
-                               u.Tel2,
-                               u.ctime
-                           };
+            //var list = from u in db.Customer
+            //           where u.IsEnable == 1
+            //           && u.CustomreName.Contains(name)
+            //           && u.Contact1.Contains(contact)
+            //           orderby u.ID
+            //               select new
+            //               {
+            //                   u.ID,
+            //                   u.CustomreName,
+            //                   u.ShortName,
+            //                   u.CustomreNo,
+            //                   u.Address,
+            //                   u.Contact1,
+            //                   u.Contact2,
+            //                   u.Tel1,
+            //                   u.Tel2,
+            //                   u.ctime
+            //               };
 
-
+            var list = db.Customer.SqlQuery("select *   from customer where isenable=1 order by id");
             ArrayList al = new ArrayList();
             al.Add(new { CustomreName = "总共：", ShortName = list.Count().ToString() + " 个客户" });
             var ming = new
             {
                 total = list.Count(),
                 rows = list,
-                footer = al,
+                footer = new { CustomreName = "总共：", ShortName = list.Count().ToString() + " 个客户" }
 
             };
             IsoDateTimeConverter timeFormat = new IsoDateTimeConverter();
@@ -61,7 +61,6 @@ namespace Mvc5.Controllers
             if (ID != 0)
             {
                 customer = db.Customer.FirstOrDefault(p => p.ID == ID);
-              
               
             }
             return PartialView("item", customer);
@@ -79,8 +78,6 @@ namespace Mvc5.Controllers
             else
             {
                 customer.ctime = DateTime.Now;
-
-               
                 db.Customer.Add(customer);
             }
             try
@@ -96,9 +93,10 @@ namespace Mvc5.Controllers
      
     
         }
-        public ActionResult del(int ID = 0)
+        public ActionResult del(int ID =0)
         {
             Customer customer = db.Customer.FirstOrDefault(p => p.ID == ID);
+          //  Customer customer = db.Customer.Find(ID);
             customer.IsEnable = 0;
             try
             {

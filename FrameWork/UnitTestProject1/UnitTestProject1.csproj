@@ -64,13 +64,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Category.cs" />
     <Compile Include="Model1.cs" />
+    <Compile Include="T_Ord_OrderChange_Detail.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

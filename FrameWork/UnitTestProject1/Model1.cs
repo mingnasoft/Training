@@ -12,22 +12,25 @@ namespace UnitTestProject1
         {
         }
 
-        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<T_Ord_OrderChange_Detail> T_Ord_OrderChange_Detail { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>()
-                .Property(e => e.RowID)
+            modelBuilder.Entity<T_Ord_OrderChange_Detail>()
+                .Property(e => e.CmpNo)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Category>()
-                .Property(e => e.ParentRowID)
+            modelBuilder.Entity<T_Ord_OrderChange_Detail>()
+                .Property(e => e.OrderNo)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(e => e.Category1)
-                .WithOptional(e => e.Category2)
-                .HasForeignKey(e => e.ParentRowID);
+            modelBuilder.Entity<T_Ord_OrderChange_Detail>()
+                .Property(e => e.FiledName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<T_Ord_OrderChange_Detail>()
+                .Property(e => e.FiledNameDes)
+                .IsUnicode(false);
         }
     }
 }
