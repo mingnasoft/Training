@@ -4,14 +4,33 @@ namespace POCOS.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.Web;
 
-    public partial class MyContext : DbContext
+    public  class MyContext : DbContext
     {
         public MyContext()
             : base("name=MyContext")
         {
         }
 
+        public static MyContext Current
+        {
+            get
+            {
+
+                if (HttpContext.Current.Items["MyContext"] != null)
+                {
+                    return HttpContext.Current.Items["MyContext"] as MyContext;
+                }
+                else
+                {
+                    MyContext _MyContext = new MyContext();
+                    HttpContext.Current.Items["MyContext"] = _MyContext;
+                    return _MyContext;
+                }
+
+            }
+        }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<LoadingChange> LoadingChange { get; set; }

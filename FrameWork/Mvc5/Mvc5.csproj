@@ -128,7 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\CookieHelper.cs" />
-    <EmbeddedResource Include="App_Code\Util.cs" />
+    <Compile Include="App_Code\SqlHelper.cs" />
+    <Compile Include="App_Code\Util.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

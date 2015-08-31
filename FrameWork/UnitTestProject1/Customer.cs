@@ -1,14 +1,13 @@
-namespace POCOS.Models
+namespace UnitTestProject1
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Core.Objects.DataClasses;
     using System.Data.Entity.Spatial;
 
     [Table("Customer")]
-    public partial class Customer : EntityBase<Customer> 
+    public partial class Customer
     {
         public int ID { get; set; }
 

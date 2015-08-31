@@ -4,15 +4,17 @@ namespace POCOS.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Core.Objects.DataClasses;
     using System.Data.Entity.Spatial;
 
     [Table("Category")]
-    public partial class Category
+    public partial class Category 
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
             Category1 = new HashSet<Category>();
+          
         }
 
         [Key]
