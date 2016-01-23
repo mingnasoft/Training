@@ -18,6 +18,7 @@ namespace codefirstfromdatabase
          foreach (var item in v)
          {
              Console.WriteLine(item.Name + " " + item.PhoneName);
+                //
          }
 
 
